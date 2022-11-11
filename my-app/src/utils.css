@@ -1,1 +1,6 @@
 /* all utilities will go here */
+:root{
+    --primary: #000000;
+    --secondary: #ffffff;
+    --tertiary: #b3b3b3;
+}
