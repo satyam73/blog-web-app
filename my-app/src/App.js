@@ -14,6 +14,7 @@ import CreateBlog from "./components/CreateBlog";
 import { signOut } from "firebase/auth";
 import { auth } from "./components/firebase-config";
 import Navbar from "./components/common/Navbar";
+import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
@@ -24,15 +25,7 @@ function App() {
           <Route element={<Home />} path="/" />
           <Route element={<Home />} path="/home" />
           <Route element={<Blog />} path="/blogs" />
-          <Route
-            element={
-              <>
-                <div>Hello this is your blog/ profile page</div>
-                <PageLayout />
-              </>
-            }
-            path="/dashboard"
-          />
+          <Route element={<Dashboard />} path="/dashboard" />
           <Route element={<CreateBlog />} path="/create" />
           <Route element={"hello this is about page"} path="/about" />
           <Route
