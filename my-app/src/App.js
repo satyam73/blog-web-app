@@ -7,6 +7,7 @@ import "./global.css";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Home from "./components/Home";
+import PageLayout from "./components/common/PageLayout";
 function App() {
   return (
     <div className="App">
@@ -16,7 +17,12 @@ function App() {
           <Route element={<Login />} path="/home" />
           <Route element={"all blogs page"} path="/blogs" />
           <Route
-            element={"hello this is profile/ your blog page"}
+            element={
+              <>
+                <div>Hello this is your blog/ profile page</div>
+                <PageLayout />
+              </>
+            }
             path="/dashboard"
           />
           <Route element={"hello this is create page"} path="/create" />

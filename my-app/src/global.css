@@ -2,3 +2,4 @@
 /* this file is linked to main renderer componenet of the website that is App.js */
 @import url("./utils.css");
 @import url("./components/styles/Home.css");
+@import url("./components/common/styles/PageLayout.css");
