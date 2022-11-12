@@ -6,7 +6,6 @@
     box-sizing: border-box;
     font-family: "Jost", sans-serif;
   }
-
   
   a {
     text-decoration: none;
@@ -29,7 +28,6 @@
   }
   .logo {
     display: grid;
-  
     grid-column: 2/3;
     justify-content: start;
     align-items: center;
@@ -40,6 +38,7 @@
   
   .menu-link ul {
     height: 80px;
+
     display: flex;
     justify-content:space-around;
     align-items: center;
