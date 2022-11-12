@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { signOut } from 'firebase/auth'
 import { auth } from "../firebase-config";
 import { Link } from 'react-router-dom';
+import "./styles/Navbar.css"
 
 const Navbar = () => {
     const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
@@ -15,7 +16,26 @@ const Navbar = () => {
     })
   }
   return (
-    <nav>
+    <nav className="main-nav">
+      <div className="logo">
+          <h2>
+            <span>Q</span>UARKS
+          </h2>
+          </div>
+        <div className ="menu-link">
+          <ul>
+            <li>
+              < a href="#">Home</a>
+            </li>
+            <li>
+            < a href="#">About</a>
+            </li>
+            <li>
+            < a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+
         <Link to="/"> Home </Link>
 
         {!isAuth ? (
