@@ -15,7 +15,8 @@ import { signOut } from "firebase/auth";
 import { auth } from "./components/firebase-config";
 import Navbar from "./components/common/Navbar";
 import Dashboard from "./components/Dashboard";
-
+import BlogPost from "./components/BlogPost";
+import * as Icon from "react-bootstrap-icons";
 function App() {
   return (
     <div className="App">
@@ -28,10 +29,7 @@ function App() {
           <Route element={<Dashboard />} path="/dashboard" />
           <Route element={<CreateBlog />} path="/create" />
           <Route element={"hello this is about page"} path="/about" />
-          <Route
-            element={"hello this is particular blog post page"}
-            path="/blog/id"
-          />
+          <Route element={<BlogPost />} path="/blog/id" />
         </Routes>
       </Router>
     </div>

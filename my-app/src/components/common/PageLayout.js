@@ -1,6 +1,7 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 function PageLayout({ LeftComponent, RightComponent }) {
+  const navigate = useNavigate();
   const location = useLocation();
   return (
     <div className="container pageLayout">
@@ -14,8 +15,23 @@ function PageLayout({ LeftComponent, RightComponent }) {
           )}
         </div>
       </div>
-      <div className="row h-100">
-        <div className="col-sm-12 col-md-8">{LeftComponent}</div>
+
+      <div className="row">
+        <div className="col-sm-12 col-md-8">
+          {location.pathname === "/dashboard" && (
+            <div className="row justify-content-end">
+              <div className="col-2">
+                <button
+                  className="btn btn-dark"
+                  onClick={() => navigate("/create")}
+                >
+                  Create
+                </button>
+              </div>
+            </div>
+          )}
+          {LeftComponent}
+        </div>
         <div className="col-sm-12 col-md-4 bg-danger">Right component here</div>
       </div>
     </div>

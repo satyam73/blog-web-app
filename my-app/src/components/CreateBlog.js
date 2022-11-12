@@ -5,8 +5,9 @@ import draftToHtml from "draftjs-to-html";
 import htmlToDraft from "html-to-draftjs";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.js";
-
+import { useNavigate } from "react-router-dom";
 function CreateBlog() {
+  const navigate = useNavigate();
   const [editorState, setEditorState] = useState(() =>
     EditorState.createEmpty()
   );
@@ -74,7 +75,14 @@ function CreateBlog() {
       </div>
       <div className="row justify-content-center align-items-center my-5 text-center">
         <div className="col-md-2 col-6">
-          <button className="btn btn-light">Cancel</button>
+          <button
+            className="btn btn-light"
+            onClick={() => {
+              navigate("/dashboard");
+            }}
+          >
+            Cancel
+          </button>
         </div>
         <div className=" col-md-2 col-6">
           <button className="btn btn-dark">Publish</button>
