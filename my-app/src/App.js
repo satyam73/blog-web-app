@@ -9,6 +9,7 @@ import Register from "./components/Register";
 import Home from "./components/Home";
 import PageLayout from "./components/common/PageLayout";
 import Blog from "./components/Blog";
+import CreateBlog from "./components/CreateBlog";
 function App() {
   return (
     <div className="App">
@@ -26,7 +27,7 @@ function App() {
             }
             path="/dashboard"
           />
-          <Route element={"hello this is create page"} path="/create" />
+          <Route element={<CreateBlog />} path="/create" />
           <Route element={"hello this is about page"} path="/about" />
           <Route
             element={"hello this is particular blog post page"}
