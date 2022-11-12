@@ -7,9 +7,11 @@
     font-family: "Jost", sans-serif;
   }
   
+
   html {
     font-size: 10px;
   }
+
   
   a {
     text-decoration: none;
@@ -32,7 +34,6 @@
   }
   .logo {
     display: grid;
-  
     grid-column: 2/3;
     justify-content: start;
     align-items: center;
