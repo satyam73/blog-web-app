@@ -18,11 +18,11 @@ import Navbar from "./components/common/Navbar";
 function App() {
   return (
     <div className="App">
-      <Navbar/>
       <Router>
+        <Navbar />
         <Routes>
           <Route element={<Home />} path="/" />
-          <Route element={<Login />} path="/home" />
+          <Route element={<Home />} path="/home" />
           <Route element={<Blog />} path="/blogs" />
           <Route
             element={
