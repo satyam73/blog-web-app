@@ -1,0 +1,12 @@
+.blogCard{
+    height: 180px;
+    width: 100%;
+    box-shadow: 0px 0px 12px grey;
+
+}
+
+@media only screen and (max-width: 767px){
+    .blogCard{
+        height: fit-content;
+    }
+}
