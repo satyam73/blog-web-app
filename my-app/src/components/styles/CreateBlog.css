@@ -1,0 +1,23 @@
+.createBlog{
+  width: 100%;
+  /* height: 100vh; */
+}
+
+/* editor styling */
+.rdw-embedded-modal{
+  height: fit-content !important;
+}
+.wrapper-class {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    height: fit-content !important;
+  }
+  .editor-class {
+    /* background-color:lightgray; */
+    padding: 1rem;
+    border: 1px solid #ccc;
+    height: 60vh !important;
+  }
+  .toolbar-class {
+    border: 1px solid #ccc;
+  }
