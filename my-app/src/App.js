@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
@@ -9,6 +10,10 @@ import Register from "./components/Register";
 import Home from "./components/Home";
 import PageLayout from "./components/common/PageLayout";
 import Blog from "./components/Blog";
+import { signOut } from 'firebase/auth'
+import { auth } from "./components/firebase-config";
+import Navbar from "./components/common/Navbar";
+
 function App() {
   return (
     <div className="App">
