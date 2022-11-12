@@ -1,119 +1,125 @@
 import React from "react";
 
-function Register() {
+function Register({ registerDetails, setRegisterDetails }) {
+  const handleChange = (evt) => {
+    setRegisterDetails({
+      ...registerDetails,
+      [evt.target.name]: evt.target.value,
+    });
+  };
   return (
-    <div>
-      <button
-        type="button"
-        class="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#registerModal"
-      >
-        Launch demo modal
-      </button>
+    <>
       <div
-        class="modal fade"
+        className="modal fade"
         id="registerModal"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
         data-bs-backdrop="static"
       >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header text-center">
-              <h1 class="modal-title fs-3 w-100">Register</h1>
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="modal-header text-center">
+              <h1 className="modal-title fs-3 w-100">Register</h1>
               <button
                 type="button"
-                class="btn-close"
+                className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">
+            <div className="modal-body">
               <form action="">
-                <div class="mb-3">
-                  <label for="name" class="form-label">
+                <div className="mb-3">
+                  <label htmlFor="name" className="form-label">
                     Name
                   </label>
                   <input
                     type="text"
-                    class="form-control p-2 fs-6"
+                    className="form-control p-2 fs-6"
                     id="name"
                     placeholder="name@example.com"
                     name="name"
+                    onChange={(evt) => handleChange(evt)}
                   />
                 </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">
+                <div className="mb-3">
+                  <label htmlFor="email" className="form-label">
                     Email
                   </label>
                   <input
                     type="email"
-                    class="form-control p-2 fs-6"
+                    className="form-control p-2 fs-6"
                     id="email"
                     placeholder="name@example.com"
                     name="email"
+                    onChange={(evt) => handleChange(evt)}
                   />
                 </div>
                 <div className="mb-3">
-                  <label class="form-label">Gender</label>
-                  <div class="form-check">
+                  <label className="form-label">Gender</label>
+                  <div className="form-check">
                     <input
-                      class="form-check-input p-2 fs-6"
+                      className="form-check-input p-2 fs-6"
                       type="radio"
                       name="gender"
                       id="female"
+                      value="female"
+                      onChange={(evt) => handleChange(evt)}
                     />
-                    <label class="form-check-label" for="female">
+                    <label className="form-check-label" htmlFor="female">
                       Female
                     </label>
                   </div>
-                  <div class="form-check">
+                  <div className="form-check">
                     <input
-                      class="form-check-input p-2 fs-6"
+                      className="form-check-input p-2 fs-6"
                       type="radio"
                       name="gender"
                       id="male"
+                      value="male"
+                      onChange={(evt) => handleChange(evt)}
                     />
-                    <label class="form-check-label" for="male">
+                    <label className="form-check-label" htmlFor="male">
                       Male
                     </label>
                   </div>
                 </div>
-                <div class="mb-3">
-                  <label for="password" class="form-label">
+                <div className="mb-3">
+                  <label htmlFor="password" className="form-label">
                     Password
                   </label>
                   <input
                     type="password"
-                    class="form-control p-2 fs-6"
+                    className="form-control p-2 fs-6"
                     id="password"
                     placeholder="Enter password here"
                     name="password"
+                    onChange={(evt) => handleChange(evt)}
                   />
                 </div>
-                <div class="mb-3">
-                  <label for="confirmPassword" class="form-label">
+                <div className="mb-3">
+                  <label htmlFor="confirmPassword" className="form-label">
                     Confirm Password
                   </label>
                   <input
                     type="password"
-                    class="form-control p-2 fs-6"
+                    className="form-control p-2 fs-6"
                     id="confirmPassword"
                     placeholder="Enter confirm password here"
                     name="confirmPassword"
+                    onChange={(evt) => handleChange(evt)}
                   />
                 </div>
               </form>
-              <button type="button" class="btn btn-primary w-100 p-2 fs-5">
+              <button type="button" className="btn btn-primary w-100 p-2 fs-5">
                 Register
               </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
