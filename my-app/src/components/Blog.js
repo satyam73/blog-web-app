@@ -1,6 +1,7 @@
 import React from "react";
 import PageLayout from "./common/PageLayout";
 import BlogCard from "./common/BlogCard";
+import Profile from "./common/Profile";
 function Blog() {
   const posts = Array(10).fill({
     title: "How to style like a professional?",
@@ -19,6 +20,7 @@ function Blog() {
             })}
           </>
         }
+        RightComponent={<Profile />}
       />
     </div>
   );
