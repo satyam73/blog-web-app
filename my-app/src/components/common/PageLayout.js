@@ -32,7 +32,7 @@ function PageLayout({ LeftComponent, RightComponent }) {
           )}
           {LeftComponent}
         </div>
-        <div className="col-sm-12 col-md-4 bg-danger">Right component here</div>
+        <div className="col-sm-12 col-md-4">{RightComponent}</div>
       </div>
     </div>
   );
