@@ -13,8 +13,8 @@ function CreateBlog() {
   );
   return (
     <div className="container createBlog">
-      <div className="row text-center my-4">
-        <h1>Create a Post</h1>
+      <div className="row text-center my-4 ">
+        <h1>Create A New Blog</h1>
       </div>
       <div className="row ">
         <div className="col-12" style={{}}>
