@@ -1,10 +1,10 @@
 import React, { Component, useState } from "react";
 import { EditorState, convertToRaw } from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
-import draftToHtml from "draftjs-to-html";
-import htmlToDraft from "html-to-draftjs";
+// import draftToHtml from "draftjs-to-html";
+// import htmlToDraft from "html-to-draftjs";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.js";
+// import "react-draft-wysiwyg/dist/react-draft-wysiwyg.js";
 import { useNavigate } from "react-router-dom";
 function CreateBlog() {
   const navigate = useNavigate();
@@ -64,7 +64,7 @@ function CreateBlog() {
               console.log(editorState.getCurrentContent());
             }}
 
-            // onEditorStateChange={this.onEditorStateChange}
+          // onEditorStateChange={this.onEditorStateChange}
           />
           {/* <EditorContainer /> */}
           {/* <textarea
