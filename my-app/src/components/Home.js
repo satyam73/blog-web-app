@@ -19,10 +19,10 @@ function Home() {
   });
   return (
     <div>
-      <Login
+      {/* <Login
         loginDetails={loginDetails}
         setLoginDetails={setLoginDetails}
-      ></Login>
+      ></Login> */}
       <Register
         registerDetails={registerDetails}
         setRegisterDetails={setRegisterDetails}
@@ -44,7 +44,7 @@ function Home() {
               </p>
             </div>
             <div className="row">
-              <div className="col-3">
+              <div className="col-4">
                 <button
                   className="btn btn-dark"
                   data-bs-toggle="modal"
@@ -53,7 +53,7 @@ function Home() {
                   Login
                 </button>
               </div>
-              <div className="col-3">
+              <div className="col-4">
                 <button
                   className="btn btn-light"
                   data-bs-toggle="modal"
