@@ -15,8 +15,8 @@ function Blog() {
       <PageLayout
         LeftComponent={
           <>
-            {posts.map((post) => {
-              return <BlogCard title={post.title} img={post.img} />;
+            {posts.map((post, index) => {
+              return <BlogCard title={post.title} img={post.img} key={index} />;
             })}
           </>
         }

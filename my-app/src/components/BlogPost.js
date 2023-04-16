@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import PageLayout from "./common/PageLayout";
-import BlogCard from "./common/BlogCard";
-// import TextToSpeech from "text-to-speech-js";
 import { useSpeechSynthesis } from "react-speech-kit";
 import {
   Heart,
@@ -9,25 +7,19 @@ import {
   VolumeUp,
   VolumeUpFill,
 } from "react-bootstrap-icons";
+
+
 function BlogPost() {
   const [isLiked, setIsLiked] = useState(false);
   const [isVolumeOn, setIsVolumeOn] = useState(false);
   const { speak } = useSpeechSynthesis();
-  const posts = Array(10).fill({
-    title: "How to style like a professional?",
-    fullPost:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam beatae exercitationem consequatur provident veniam. Reiciendis consequatur cupiditate voluptates ipsam quod error, odit quae laborum eum suscipit tempore ea. Voluptates, numquam?",
-    img: "https://images.pexels.com/photos/159108/light-lamp-electricity-power-159108.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
-  });
   const voiceHandler = () => {
     setIsVolumeOn(true);
     speak(
       {
         text: "hello there You can find (just about) anything on Quarks — apparently even a page that doesn’t exist. Maybe these stories about finding what you didn’t know you were looking for will take you somewhere new? thanks",
       }
-      // setIsVolumeOn(true);
     );
-    // setIsVolumeOn(false);
   };
 
   return (
