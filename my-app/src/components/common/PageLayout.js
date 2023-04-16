@@ -20,9 +20,10 @@ function PageLayout({ LeftComponent, RightComponent }) {
         <div className="col-sm-12 col-md-8">
           {location.pathname === "/dashboard" && (
             <div className="row justify-content-end">
-              <div className="col-2">
+              <div className="col-4">
                 <button
                   className="btn btn-dark"
+                  style={{ width: "-webkit-fill-available" }}
                   onClick={() => navigate("/create")}
                 >
                   Create

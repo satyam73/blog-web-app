@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import Login from "./Login";
 import Register from "./Register";
 import slider1 from "../images/slider1_img.png";
 import slider2 from "../images/slider2_img.png";
 import slider3 from "../images/slider3_img.png";
 
 function Home() {
-  const [loginDetails, setLoginDetails] = useState({
-    mail: "",
-    password: "",
-  });
+  // const [loginDetails, setLoginDetails] = useState({
+  //   mail: "",
+  //   password: "",
+  // });
   const [registerDetails, setRegisterDetails] = useState({
     name: "",
     email: "",
